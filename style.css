@@ -1,21 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800&display=swap');
 
 :root {
-    --fundo-principal: #090514;
-    --card-fundo: #120b24;
-    --card-borda: #2a1b4e;
-    
-    --texto-principal: #f8fafc;
-    --texto-secundario: #94a3b8;
+    /* Nova Paleta Editorial Futurista */
+    --fundo-base: #f4f3ef;       /* Creme Claro */
+    --fundo-card: #ffffff;       /* Branco Puro */
+    --texto-escuro: #0a0a10;     /* Quase Preto */
+    --texto-suave: #555560;      /* Cinza Grafite */
 
-    /* Novas Cores Neons */
-    --neon-roxo: #a855f7;
-    --neon-rosa: #ec4899;
-    --neon-verde: #10b981;
+    --cobalto: #0038ff;          /* Azul Cobalto Intenso */
+    --laranja-neon: #ff5c00;     /* Laranja Neon */
+    --borda-fina: #e0dfd5;
 }
 
 /* =========================
-   RESET & BASE
+   RESET E ESTRUTURA BASE
 ========================= */
 
 * {
@@ -29,22 +27,19 @@ html {
 }
 
 body {
-    background: var(--fundo-principal);
-    color: var(--texto-principal);
-    font-family: 'Inter', sans-serif;
+    background: var(--fundo-base);
+    color: var(--texto-escuro);
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 20px 0;
 }
 
-/* =========================
-   REVISTA
-========================= */
-
 .revista {
-    width: 100%;
-    max-width: 1100px;
+    width: 92%;
+    max-width: 1000px;
     margin: auto;
-    background: var(--card-fundo);
-    border-left: 1px solid var(--card-borda);
-    border-right: 1px solid var(--card-borda);
+    background: var(--fundo-card);
+    border: 2px solid var(--texto-escuro);
+    box-shadow: 12px 12px 0px var(--texto-escuro);
 }
 
 /* =========================
@@ -52,209 +47,202 @@ body {
 ========================= */
 
 .capa {
-    min-height: 100vh;
+    min-height: 90vh;
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
-    overflow: hidden;
-    background: 
-        radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.25), transparent 40%),
-        radial-gradient(circle at 20% 80%, rgba(236, 72, 153, 0.2), transparent 40%),
-        var(--card-fundo);
+    background: radial-gradient(circle at 90% 10%, rgba(255, 92, 0, 0.08), transparent 40%),
+                radial-gradient(circle at 10% 90%, rgba(0, 56, 255, 0.08), transparent 40%);
+    border-bottom: 2px solid var(--texto-escuro);
 }
 
 .capa-topo,
 .capa-rodape {
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
-    letter-spacing: 3px;
-    color: var(--texto-secundario);
-    z-index: 2;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--texto-suave);
+    border-bottom: 1px solid var(--borda-fina);
+    padding-bottom: 10px;
 }
 
-.capa-conteudo {
-    position: relative;
-    z-index: 2;
-    max-width: 850px;
+.capa-rodape {
+    border-bottom: none;
+    border-top: 1px solid var(--borda-fina);
+    padding-top: 10px;
+    padding-bottom: 0;
 }
 
 .categoria,
 .etiqueta {
-    color: var(--neon-rosa);
-    font-size: 13px;
+    color: var(--laranja-neon);
+    font-size: 12px;
     font-weight: 700;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
     text-transform: uppercase;
 }
 
 .capa h1 {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: clamp(50px, 8vw, 100px);
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(48px, 7vw, 90px);
     line-height: 0.9;
-    font-weight: 700;
-    letter-spacing: -2px;
-    margin-bottom: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 25px;
 }
 
 .capa h1 span {
-    color: var(--neon-roxo);
-    text-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+    color: var(--cobalto);
 }
 
 .subtitulo {
-    max-width: 550px;
+    max-width: 500px;
     font-size: 18px;
-    line-height: 1.6;
-    color: var(--texto-secundario);
-    margin-bottom: 40px;
+    line-height: 1.5;
+    color: var(--texto-suave);
+    margin-bottom: 30px;
 }
 
 /* =========================
-   BOTÕES
+   BOTÕES E AÇÕES
 ========================= */
 
 button {
     border: none;
     cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    transition: all 0.3s ease;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: all 0.2s ease;
 }
 
 .iniciar-btn,
 .novamente-btn {
-    background: linear-gradient(135deg, var(--neon-roxo), var(--neon-rosa));
+    background: var(--texto-escuro);
     color: #ffffff;
-    padding: 18px 32px;
+    padding: 16px 30px;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 2px;
-    border-radius: 6px;
-    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+    border: 2px solid var(--texto-escuro);
 }
 
 .iniciar-btn:hover,
 .novamente-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.5);
+    background: var(--cobalto);
+    border-color: var(--cobalto);
+    color: #ffffff;
+    transform: translate(-3px, -3px);
+    box-shadow: 4px 4px 0px var(--texto-escuro);
 }
 
 /* =========================
-   INTRODUÇÃO
+   EDITORIAL / INTRODUÇÃO
 ========================= */
 
 .introducao {
-    min-height: 650px;
     padding: 60px 40px;
-    background: #ffffff;
-    color: #0f172a;
+    background: var(--fundo-base);
+    border-bottom: 2px solid var(--texto-escuro);
 }
 
 .numero-pagina {
-    font-size: 12px;
-    letter-spacing: 3px;
-    color: #64748b;
-    margin-bottom: 60px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--texto-suave);
+    margin-bottom: 40px;
 }
 
 .introducao-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    max-width: 950px;
-    margin: auto;
-}
-
-.introducao .etiqueta {
-    color: var(--neon-roxo);
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
 }
 
 .introducao h2 {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: clamp(40px, 5vw, 65px);
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(36px, 4.5vw, 55px);
     line-height: 1;
-    letter-spacing: -2px;
+    color: var(--cobalto);
 }
 
 .texto-introducao {
     font-size: 16px;
-    line-height: 1.8;
-    color: #334155;
+    line-height: 1.7;
+    color: var(--texto-escuro);
 }
 
 .texto-introducao p {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 /* =========================
-   JOGO
+   ÁREA DO JOGO
 ========================= */
 
 .jogo {
-    min-height: 650px;
     padding: 60px 40px;
-    background: var(--card-fundo);
+    background: var(--fundo-card);
 }
 
 .cabecalho-jogo {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     margin-bottom: 20px;
 }
 
 .cabecalho-jogo h2 {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 42px;
+    font-family: 'Syne', sans-serif;
+    font-size: 36px;
 }
 
 .pagina {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 32px;
-    color: var(--neon-rosa);
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    color: var(--laranja-neon);
 }
 
 .linha {
-    height: 1px;
-    background: var(--card-borda);
-    margin-bottom: 50px;
+    height: 2px;
+    background: var(--texto-escuro);
+    margin-bottom: 40px;
 }
 
 .caixa-perguntas {
-    max-width: 850px;
-    margin: 0 auto 40px;
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: clamp(24px, 3.5vw, 38px);
-    font-weight: 500;
-    line-height: 1.2;
+    max-width: 800px;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 40px;
 }
 
 .caixa-alternativas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    max-width: 850px;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
 }
 
 .caixa-alternativas button {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--card-borda);
-    color: var(--texto-principal);
-    padding: 24px;
-    border-radius: 8px;
+    background: var(--fundo-base);
+    border: 2px solid var(--texto-escuro);
+    color: var(--texto-escuro);
+    padding: 20px 25px;
     text-align: left;
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 .caixa-alternativas button:hover {
-    background: rgba(168, 85, 247, 0.1);
-    border-color: var(--neon-roxo);
-    transform: translateY(-3px);
+    background: var(--laranja-neon);
+    color: #ffffff;
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px 0px var(--texto-escuro);
 }
 
 /* =========================
@@ -263,10 +251,9 @@ button {
 
 .caixa-resultado {
     display: none;
-    min-height: 650px;
-    background: linear-gradient(180deg, #120b24 0%, #05030a 100%);
-    padding: 40px;
-    position: relative;
+    padding: 60px 40px;
+    background: var(--cobalto);
+    color: #ffffff;
 }
 
 .caixa-resultado.mostrar {
@@ -276,42 +263,50 @@ button {
 .resultado-topo {
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
-    letter-spacing: 3px;
-    color: var(--texto-secundario);
-    border-bottom: 1px solid var(--card-borda);
-    padding-bottom: 20px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 15px;
 }
 
 .resultado-conteudo {
-    max-width: 800px;
-    margin: 80px auto;
+    max-width: 750px;
+    margin: 60px 0;
+}
+
+.resultado-conteudo .etiqueta {
+    color: var(--laranja-neon);
 }
 
 .resultado-conteudo h2 {
-    font-family: 'Chakra Petch', sans-serif;
-    color: var(--neon-rosa);
-    font-size: clamp(48px, 7vw, 90px);
-    margin-bottom: 30px;
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(40px, 6vw, 70px);
+    margin-bottom: 20px;
 }
 
 .texto-resultado {
-    color: var(--texto-secundario);
     font-size: 18px;
-    line-height: 1.8;
+    line-height: 1.7;
+    color: #f0f0f5;
     margin-bottom: 40px;
 }
 
+.resultado-conteudo .novamente-btn {
+    background: #ffffff;
+    color: var(--texto-escuro);
+    border: 2px solid var(--texto-escuro);
+}
+
+.resultado-conteudo .novamente-btn:hover {
+    background: var(--laranja-neon);
+    color: #ffffff;
+}
+
 .resultado-rodape {
-    position: absolute;
-    bottom: 30px;
-    left: 40px;
-    right: 40px;
-    padding-top: 20px;
-    border-top: 1px solid var(--card-borda);
-    color: var(--texto-secundario);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 15px;
     font-size: 11px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 /* =========================
@@ -319,11 +314,18 @@ button {
 ========================= */
 
 @media (max-width: 768px) {
+    .revista {
+        width: 100%;
+        border: none;
+        box-shadow: none;
+    }
+
     .capa, .introducao, .jogo, .caixa-resultado {
         padding: 30px 20px;
     }
 
-    .introducao-grid, .caixa-alternativas {
+    .introducao-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
