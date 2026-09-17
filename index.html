@@ -1,243 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style.css">
-
-    <title>IA Magazine — Você decide o futuro da IA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz sobre Inteligência Artificial</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <main class="revista">
-
-        <!-- CAPA -->
-        <section class="capa">
-
-            <div class="grade"></div>
-
-            <header class="capa-topo">
-                <span>IA MAGAZINE</span>
-                <span>EDIÇÃO Nº 01 • 2049</span>
-            </header>
-
-            <div class="capa-conteudo">
-
-                <div class="selo">
-                    <span class="ponto"></span>
-                    EXPERIÊNCIA INTERATIVA
-                </div>
-
-                <p class="categoria">
-                    TECNOLOGIA / FUTURO / HUMANIDADE
-                </p>
-
-                <h1>
-                    VOCÊ DECIDE
-                    <strong>O FUTURO<br>DA IA</strong>
-                </h1>
-
-                <div class="capa-info">
-                    <p class="subtitulo">
-                        Cinco escolhas.<br>
-                        Infinitos futuros possíveis.
-                    </p>
-
-                    <button class="iniciar-btn">
-                        COMEÇAR <span>→</span>
-                    </button>
-                </div>
-
-            </div>
-
-            <div class="capa-destaque">
-                <span>01</span>
-                <div></div>
-                <span>O FUTURO COMEÇA AGORA</span>
-            </div>
-
-            <footer class="capa-rodape">
-                <span>INTELIGÊNCIA ARTIFICIAL</span>
-                <span>EDIÇÃO DIGITAL</span>
-                <span>WWW.IAMAGAZINE.COM</span>
-            </footer>
-
-        </section>
-
-
-        <!-- EDITORIAL -->
-        <section class="introducao">
-
-            <div class="numero-pagina">
-                <span>01</span>
-                EDITORIAL
-            </div>
-
-            <div class="introducao-grid">
-
-                <div class="intro-titulo">
-
-                    <p class="etiqueta">EDITORIAL</p>
-
-                    <h2>
-                        O futuro não
-                        acontece sozinho.
-                    </h2>
-
-                    <div class="numero-gigante">
-                        2049
-                    </div>
-
-                </div>
-
-                <div class="texto-introducao">
-
-                    <p class="texto-destaque">
-                        Novembro de 2022 marcou o início de uma
-                        nova conversa sobre Inteligência Artificial.
-                    </p>
-
-                    <p>
-                        De repente, percebemos que as máquinas
-                        evoluíram para além do que imaginávamos.
-                        Elas escrevem, criam imagens, produzem
-                        sons e conversam de maneiras cada vez
-                        mais sofisticadas.
-                    </p>
-
-                    <p>
-                        Mas tecnologia não determina sozinha o
-                        futuro. As decisões das pessoas também
-                        fazem parte dessa história.
-                    </p>
-
-                    <div class="intro-box">
-                        <span>01</span>
-                        <p>
-                            Suas escolhas nesta experiência
-                            vão construir uma possível visão
-                            do mundo em 2049.
-                        </p>
-                    </div>
-
-                    <button class="iniciar-btn claro">
-                        VIRAR A PÁGINA <span>→</span>
-                    </button>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- JOGO -->
-        <section class="jogo">
-
-            <div class="cabecalho-jogo">
-
-                <div>
-                    <p class="etiqueta">EXPERIÊNCIA / 01—05</p>
-
-                    <h2>
-                        Você decide<span>.</span>
-                    </h2>
-                </div>
-
-                <div class="progresso">
-                    <span>ESCOLHA</span>
-                    <strong>01</strong>
-                    <small>/ 05</small>
-                </div>
-
-            </div>
-
-            <div class="linha"></div>
-
-            <div class="jogo-layout">
-
-                <aside class="jogo-aside">
-
-                    <div class="marcador">IA</div>
-
-                    <p>
-                        NÃO EXISTE
-                        UMA RESPOSTA
-                        CERTA.
-                    </p>
-
-                    <span>
-                        ESCOLHA O CAMINHO
-                        QUE MAIS REPRESENTA
-                        VOCÊ.
-                    </span>
-
-                </aside>
-
-                <div class="jogo-conteudo">
-
-                    <div class="questao-label">
-                        QUESTÃO <span>01</span>
-                    </div>
-
-                    <div class="caixa-perguntas"></div>
-
-                    <div class="caixa-alternativas"></div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- RESULTADO -->
-        <section class="caixa-resultado">
-
-            <div class="resultado-glow"></div>
-
-            <div class="resultado-topo">
-                <span>IA MAGAZINE</span>
-                <span>EDIÇÃO DO FUTURO • 2049</span>
-            </div>
-
-            <div class="resultado-conteudo">
-
-                <div class="resultado-label">
-                    SUA HISTÓRIA
-                </div>
-
-                <h2>
-                    Em 2049<span>...</span>
-                </h2>
-
-                <div class="resultado-linha"></div>
-
-                <p class="texto-resultado"></p>
-
-                <button class="novamente-btn">
-                    ↻ VIVER NOVAMENTE
-                </button>
-
-            </div>
-
-            <div class="resultado-numero">
-                49
-            </div>
-
-            <div class="resultado-rodape">
-                IA MAGAZINE • O FUTURO ESTÁ EM SUAS ESCOLHAS
-            </div>
-
-        </section>
-
-    </main>
-
-    <script src="script.js"></script>
-
+  <main class="quiz-container">
+    <h1>Quiz de IA</h1>
+    
+    <!-- Cartão da Pergunta -->
+    <div id="quiz-box">
+      <h2 id="question-text">A pergunta aparecerá aqui...</h2>
+      <div id="options-container" class="options-grid">
+        <!-- As opções serão inseridas dinamicamente via JS -->
+      </div>
+    </div>
+
+    <!-- Tela de Resultado (Escondida inicialmente) -->
+    <div id="result-box" class="hidden">
+      <h2>Resultado Final</h2>
+      <p id="score-text">Você acertou X de Y perguntas!</p>
+      <button id="restart-btn" onclick="restartQuiz()">Tentar Novamente</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
