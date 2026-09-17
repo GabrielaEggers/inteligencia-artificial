@@ -1,32 +1,108 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz sobre Inteligência Artificial</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>IA Magazine — Você decide o futuro da IA</title>
 </head>
+
 <body>
 
-  <main class="quiz-container">
-    <h1>Quiz de IA</h1>
-    
-    <!-- Cartão da Pergunta -->
-    <div id="quiz-box">
-      <h2 id="question-text">A pergunta aparecerá aqui...</h2>
-      <div id="options-container" class="options-grid">
-        <!-- As opções serão inseridas dinamicamente via JS -->
-      </div>
-    </div>
+    <main class="revista">
 
-    <!-- Tela de Resultado (Escondida inicialmente) -->
-    <div id="result-box" class="hidden">
-      <h2>Resultado Final</h2>
-      <p id="score-text">Você acertou X de Y perguntas!</p>
-      <button id="restart-btn" onclick="restartQuiz()">Tentar Novamente</button>
-    </div>
-  </main>
+        <!-- CAPA -->
+        <section class="capa">
+            <div class="capa-topo">
+                <span>EDIÇÃO ESPECIAL</span>
+                <span>Nº 01 • 2049</span>
+            </div>
 
-  <script src="script.js"></script>
+            <div class="capa-conteudo">
+                <p class="categoria">TECNOLOGIA • FUTURO • HUMANIDADE</p>
+                <h1>
+                    VOCÊ DECIDE<br>
+                    <span>O FUTURO DA IA</span>
+                </h1>
+                <p class="subtitulo">
+                    Uma experiência interativa para descobrir como suas escolhas podem transformar o futuro.
+                </p>
+                <button class="iniciar-btn">
+                    COMEÇAR A EXPERIÊNCIA →
+                </button>
+            </div>
+
+            <div class="capa-rodape">
+                <span>INTELIGÊNCIA ARTIFICIAL</span>
+                <span>EDIÇÃO DIGITAL</span>
+            </div>
+        </section>
+
+
+        <!-- INTRODUÇÃO -->
+        <section class="introducao">
+            <div class="numero-pagina">01 / EDITORIAL</div>
+
+            <div class="introducao-grid">
+                <div>
+                    <p class="etiqueta">EDITORIAL</p>
+                    <h2>O mundo nunca mais será o mesmo.</h2>
+                </div>
+
+                <div class="texto-introducao">
+                    <p>Novembro de 2022. A humanidade se viu diante de uma realidade perturbadora.</p>
+                    <p>De repente, percebemos que as máquinas evoluíram para além do que imaginávamos. Elas escrevem, criam imagens e falam de um jeito cada vez mais parecido com os humanos.</p>
+                    <p>Agora você está no centro dessa transformação. Cada escolha poderá construir uma visão diferente sobre o futuro da Inteligência Artificial.</p>
+                    <button class="iniciar-btn">VIRAR A PÁGINA →</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ÁREA DO JOGO -->
+        <section class="jogo">
+            <div class="cabecalho-jogo">
+                <div>
+                    <p class="etiqueta">EXPERIÊNCIA INTERATIVA</p>
+                    <h2>Você decide.</h2>
+                </div>
+                <div class="pagina" id="indicador-pagina">01 / 05</div>
+            </div>
+
+            <div class="linha"></div>
+
+            <div class="caixa-perguntas"></div>
+            <div class="caixa-alternativas"></div>
+        </section>
+
+
+        <!-- RESULTADO -->
+        <section class="caixa-resultado">
+            <div class="resultado-topo">
+                <span>EDIÇÃO DO FUTURO</span>
+                <span>2049</span>
+            </div>
+
+            <div class="resultado-conteudo">
+                <p class="etiqueta">SUA HISTÓRIA</p>
+
+                <h2>Em 2049...</h2>
+
+                <p class="texto-resultado"></p>
+
+                <button class="novamente-btn">↻ VIVER NOVAMENTE</button>
+            </div>
+
+            <div class="resultado-rodape">
+                IA MAGAZINE • O FUTURO ESTÁ EM SUAS ESCOLHAS
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
