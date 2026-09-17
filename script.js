@@ -1,25 +1,24 @@
-const nomes = [
-"Fernanda",
-"Giuliana",
-"Maria Eduarda",
-"Marcelo",
-"Amanda",
-"Gustavo",
-"Gabriel"
-];
+// ==========================================
+// ELEMENTOS
+// ==========================================
 
-/**
+const botoesIniciar =
+    document.querySelectorAll(".iniciar-btn");
 
-Escolhe aleatoriamente um item de uma lista.
-*/
-export function aleatorio(lista) {
-const posicao = Math.floor(Math.random() * lista.length);
+const caixaPerguntas =
+    document.querySelector(".caixa-perguntas");
 
-return lista[posicao];
-}
+const caixaAlternativas =
+    document.querySelector(".caixa-alternativas");
 
-/**
+const caixaResultado =
+    document.querySelector(".caixa-resultado");
 
-Escolhe um nome aleatório.
-*/
-export const nome = aleatorio(nomes);
+const textoResultado =
+    document.querySelector(".texto-resultado");
+
+const botaoJogarNovamente =
+    document.querySelector(".novamente-btn");
+
+const jogo =
+    document.querySelector(".jogo");
